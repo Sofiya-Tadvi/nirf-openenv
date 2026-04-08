@@ -15,11 +15,11 @@ class NIRFObservation(Observation): # MUST inherit from Observation
     nirf_rules: str = Field(default="")
     explanation: Optional[str] = Field(default=None)
 
-class NIRFAction(Action): 
+class NIRFAction(Action):
     thought: Optional[str] = None
-    sql_query: Optional[str] = Field(default=None)
-    final_ans: Optional[str] = Field(default=None)
-    to_submit: bool = Field(default=False)
+    sql_query: Optional[str] = None
+    final_ans: Optional[str] = None
+    to_submit: bool = False
 
 class StepResult(BaseModel):
     observation: NIRFObservation

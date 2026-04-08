@@ -6,7 +6,7 @@ from models import NIRFAction, NIRFObservation
 # The Bootcamp version of create_app expects the CLASS name, 
 # but it must be the ONLY thing passed as the first argument.
 app = create_app(
-    NIRFenv,  # DO NOT use parentheses ()
+    NIRFenv,   # ✅ PASS CLASS DIRECTLY
     action_cls=NIRFAction,
     observation_cls=NIRFObservation
 )
