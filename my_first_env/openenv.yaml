@@ -1,0 +1,13 @@
+spec_version: 1
+name: nirf-evaluation-env
+type: space
+runtime: fastapi
+app: server.app:app
+port: 8000
+
+description: Simulates NIRF data analysis tasks
+
+tasks:
+  - female_percentage
+  - faculty_count
+  - female_count
