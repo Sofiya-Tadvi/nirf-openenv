@@ -57,10 +57,8 @@ class NIRFenv(Environment):
     )
 
     def reset(self) -> NIRFObservation:
-        super().reset()
-
-        if not hasattr(self, "current_task_index"):
-            self.current_task_index = 0
+        self.step_count = 0
+        self.episode_id += 1
 
         self.current_task_index = (self.current_task_index + 1) % len(self.tasks)
         self.task = self.tasks[self.current_task_index]["question"]

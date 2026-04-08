@@ -1,5 +1,5 @@
 spec_version: 1
-name: nirf-evaluation-env
+name: nirf-env
 type: space
 runtime: fastapi
 app: server.app:app
